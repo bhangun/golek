@@ -1,9 +1,5 @@
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/engine/EngineContext.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/plugin/PluginClassLoader.java
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/engine/GolekPluginRegistry.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/engine/EngineMetadata.java
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/execution/ExecutionSignal.java
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/engine/ProviderRegistry.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/exception/AuthorizationException.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/inference/InferenceObserver.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/config/EnhancedConfigurationManager.java
@@ -12,12 +8,10 @@
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/plugin/InferencePhasePlugin.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/exception/TenantQuotaExceededException.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/plugin/GolekConfigurablePlugin.java
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/plugin/PluginRegistry.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/observability/ObservabilityManager.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/observability/LogAggregator.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/NativeImageFeature.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/inference/StreamingResponse.java
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/execution/ExecutionStateMachine.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/exception/IllegalStateTransitionException.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/plugin/DefaultPluginContext.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/observability/MetricsRegistry.java
@@ -33,10 +27,8 @@
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/exception/NoCompatibleProviderException.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/reliability/FallbackStrategy.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/plugin/ExtensionPoint.java
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/engine/HealthStatus.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/exception/AllRunnersFailedException.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/audit/AuditLoggingPlugin.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/reliability/FallbackStrategyRegistry.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/inference/InferenceEngine.java
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/execution/ExecutionStatus.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-core/src/main/java/tech/kayys/golek/core/pipeline/InferencePipeline.java

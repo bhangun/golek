@@ -1,4 +1,0 @@
-tech/kayys/golek/provider/core/ratelimit/SlidingWindowRateLimiterTest.class
-tech/kayys/golek/provider/core/circuit/DefaultCircuitBreakerTest.class
-tech/kayys/golek/provider/core/adapter/AbstractProviderQuotaTest.class
-tech/kayys/golek/provider/core/adapter/AbstractProviderQuotaTest$TestProvider.class

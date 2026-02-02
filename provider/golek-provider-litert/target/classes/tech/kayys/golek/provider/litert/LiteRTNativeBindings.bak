@@ -1,0 +1,471 @@
+package tech.kayys.golek.provider.litert;
+
+import lombok.extern.slf4j.Slf4j;
+
+import java.lang.foreign.*;
+import java.lang.invoke.MethodHandle;
+import java.nio.file.Path;
+
+import static java.lang.foreign.ValueLayout.*;
+
+/**
+ * Native bindings for TensorFlow Lite C API using Java Foreign Function &
+ * Memory API (FFM).
+ * 
+ * <p>
+ * This class provides zero-overhead native interop with the TensorFlow Lite
+ * runtime
+ * without JNI. It uses the modern FFM API introduced in JDK 19 and finalized in
+ * JDK 22.
+ * 
+ * <p>
+ * Key Benefits over JNI:
+ * <ul>
+ * <li>No JNI overhead - direct native calls</li>
+ * <li>Type-safe memory access</li>
+ * <li>Automatic memory management with Arena</li>
+ * <li>Better performance for tensor operations</li>
+ * </ul>
+ * 
+ * <p>
+ * Thread Safety: This class is thread-safe after initialization.
+ * Individual interpreter instances should not be shared across threads.
+ * 
+ * @author bhangun
+ * @since 1.0.0
+ */
+@Slf4j
+public class LiteRTNativeBindings {
+
+    private final SymbolLookup symbolLookup;
+    private final Linker linker;
+
+    // ===== Function Handles =====
+    private final MethodHandle TfLiteModelCreate;
+    private final MethodHandle TfLiteModelDelete;
+    private final MethodHandle TfLiteInterpreterOptionsCreate;
+    private final MethodHandle TfLiteInterpreterOptionsDelete;
+    private final MethodHandle TfLiteInterpreterOptionsSetNumThreads;
+    private final MethodHandle TfLiteInterpreterCreate;
+    private final MethodHandle TfLiteInterpreterDelete;
+    private final MethodHandle TfLiteInterpreterAllocateTensors;
+    private final MethodHandle TfLiteInterpreterInvoke;
+    private final MethodHandle TfLiteInterpreterGetInputTensorCount;
+    private final MethodHandle TfLiteInterpreterGetOutputTensorCount;
+    private final MethodHandle TfLiteInterpreterGetInputTensor;
+    private final MethodHandle TfLiteInterpreterGetOutputTensor;
+    private final MethodHandle TfLiteTensorType;
+    private final MethodHandle TfLiteTensorNumDims;
+    private final MethodHandle TfLiteTensorDim;
+    private final MethodHandle TfLiteTensorByteSize;
+    private final MethodHandle TfLiteTensorData;
+    private final MethodHandle TfLiteTensorCopyFromBuffer;
+    private final MethodHandle TfLiteTensorCopyToBuffer;
+    private final MethodHandle TfLiteTensorName;
+
+    /**
+     * Initialize native bindings by loading the LiteRT library.
+     * 
+     * @param libraryPath Path to libtensorflowlite_c.so (or .dylib/.dll)
+     * @throws IllegalStateException if library cannot be loaded
+     */
+    public LiteRTNativeBindings(Path libraryPath) {
+        log.info("Initializing LiteRT native bindings from: {}", libraryPath);
+
+        try {
+            // Load the native library
+            System.load(libraryPath.toAbsolutePath().toString());
+
+            // Get symbol lookup and linker
+            this.symbolLookup = SymbolLookup.loaderLookup();
+            this.linker = Linker.nativeLinker();
+
+            // Bind all functions
+            this.TfLiteModelCreate = bindFunction("TfLiteModelCreate",
+                    FunctionDescriptor.of(ADDRESS, ADDRESS, JAVA_INT));
+
+            this.TfLiteModelDelete = bindFunction("TfLiteModelDelete",
+                    FunctionDescriptor.ofVoid(ADDRESS));
+
+            this.TfLiteInterpreterOptionsCreate = bindFunction("TfLiteInterpreterOptionsCreate",
+                    FunctionDescriptor.of(ADDRESS));
+
+            this.TfLiteInterpreterOptionsDelete = bindFunction("TfLiteInterpreterOptionsDelete",
+                    FunctionDescriptor.ofVoid(ADDRESS));
+
+            this.TfLiteInterpreterOptionsSetNumThreads = bindFunction("TfLiteInterpreterOptionsSetNumThreads",
+                    FunctionDescriptor.ofVoid(ADDRESS, JAVA_INT));
+
+            this.TfLiteInterpreterCreate = bindFunction("TfLiteInterpreterCreate",
+                    FunctionDescriptor.of(ADDRESS, ADDRESS, ADDRESS));
+
+            this.TfLiteInterpreterDelete = bindFunction("TfLiteInterpreterDelete",
+                    FunctionDescriptor.ofVoid(ADDRESS));
+
+            this.TfLiteInterpreterAllocateTensors = bindFunction("TfLiteInterpreterAllocateTensors",
+                    FunctionDescriptor.of(JAVA_INT, ADDRESS));
+
+            this.TfLiteInterpreterInvoke = bindFunction("TfLiteInterpreterInvoke",
+                    FunctionDescriptor.of(JAVA_INT, ADDRESS));
+
+            this.TfLiteInterpreterGetInputTensorCount = bindFunction("TfLiteInterpreterGetInputTensorCount",
+                    FunctionDescriptor.of(JAVA_INT, ADDRESS));
+
+            this.TfLiteInterpreterGetOutputTensorCount = bindFunction("TfLiteInterpreterGetOutputTensorCount",
+                    FunctionDescriptor.of(JAVA_INT, ADDRESS));
+
+            this.TfLiteInterpreterGetInputTensor = bindFunction("TfLiteInterpreterGetInputTensor",
+                    FunctionDescriptor.of(ADDRESS, ADDRESS, JAVA_INT));
+
+            this.TfLiteInterpreterGetOutputTensor = bindFunction("TfLiteInterpreterGetOutputTensor",
+                    FunctionDescriptor.of(ADDRESS, ADDRESS, JAVA_INT));
+
+            this.TfLiteTensorType = bindFunction("TfLiteTensorType",
+                    FunctionDescriptor.of(JAVA_INT, ADDRESS));
+
+            this.TfLiteTensorNumDims = bindFunction("TfLiteTensorNumDims",
+                    FunctionDescriptor.of(JAVA_INT, ADDRESS));
+
+            this.TfLiteTensorDim = bindFunction("TfLiteTensorDim",
+                    FunctionDescriptor.of(JAVA_INT, ADDRESS, JAVA_INT));
+
+            this.TfLiteTensorByteSize = bindFunction("TfLiteTensorByteSize",
+                    FunctionDescriptor.of(JAVA_LONG, ADDRESS));
+
+            this.TfLiteTensorData = bindFunction("TfLiteTensorData",
+                    FunctionDescriptor.of(ADDRESS, ADDRESS));
+
+            this.TfLiteTensorCopyFromBuffer = bindFunction("TfLiteTensorCopyFromBuffer",
+                    FunctionDescriptor.of(JAVA_INT, ADDRESS, ADDRESS, JAVA_LONG));
+
+            this.TfLiteTensorCopyToBuffer = bindFunction("TfLiteTensorCopyToBuffer",
+                    FunctionDescriptor.of(JAVA_INT, ADDRESS, ADDRESS, JAVA_LONG));
+
+            this.TfLiteTensorName = bindFunction("TfLiteTensorName",
+                    FunctionDescriptor.of(ADDRESS, ADDRESS));
+
+            log.info("LiteRT native bindings initialized successfully");
+
+        } catch (Exception e) {
+            log.error("Failed to initialize LiteRT native bindings", e);
+            throw new IllegalStateException("Failed to load LiteRT native library", e);
+        }
+    }
+
+    /**
+     * Helper method to bind a native function.
+     */
+    private MethodHandle bindFunction(String functionName, FunctionDescriptor descriptor) {
+        try {
+            MemorySegment symbol = symbolLookup.find(functionName)
+                    .orElseThrow(() -> new IllegalStateException("Function not found: " + functionName));
+            return linker.downcallHandle(symbol, descriptor);
+        } catch (Exception e) {
+            throw new IllegalStateException("Failed to bind function: " + functionName, e);
+        }
+    }
+
+    // ===== Model Management =====
+
+    /**
+     * Create a model from a buffer.
+     * 
+     * @param modelData Memory segment containing the .tflite model
+     * @param modelSize Size of the model in bytes
+     * @return Native pointer to TfLiteModel
+     */
+    public MemorySegment createModel(MemorySegment modelData, int modelSize) {
+        try {
+            return (MemorySegment) TfLiteModelCreate.invoke(modelData, modelSize);
+        } catch (Throwable e) {
+            throw new RuntimeException("Failed to create TfLite model", e);
+        }
+    }
+
+    /**
+     * Delete a model and free its resources.
+     */
+    public void deleteModel(MemorySegment model) {
+        try {
+            TfLiteModelDelete.invoke(model);
+        } catch (Throwable e) {
+            log.error("Failed to delete TfLite model", e);
+        }
+    }
+
+    // ===== Interpreter Options =====
+
+    /**
+     * Create interpreter options.
+     */
+    public MemorySegment createInterpreterOptions() {
+        try {
+            return (MemorySegment) TfLiteInterpreterOptionsCreate.invoke();
+        } catch (Throwable e) {
+            throw new RuntimeException("Failed to create interpreter options", e);
+        }
+    }
+
+    /**
+     * Delete interpreter options.
+     */
+    public void deleteInterpreterOptions(MemorySegment options) {
+        try {
+            TfLiteInterpreterOptionsDelete.invoke(options);
+        } catch (Throwable e) {
+            log.error("Failed to delete interpreter options", e);
+        }
+    }
+
+    /**
+     * Set number of threads for interpreter.
+     */
+    public void setNumThreads(MemorySegment options, int numThreads) {
+        try {
+            TfLiteInterpreterOptionsSetNumThreads.invoke(options, numThreads);
+        } catch (Throwable e) {
+            throw new RuntimeException("Failed to set num threads", e);
+        }
+    }
+
+    // ===== Interpreter Management =====
+
+    /**
+     * Create an interpreter.
+     */
+    public MemorySegment createInterpreter(MemorySegment model, MemorySegment options) {
+        try {
+            return (MemorySegment) TfLiteInterpreterCreate.invoke(model, options);
+        } catch (Throwable e) {
+            throw new RuntimeException("Failed to create interpreter", e);
+        }
+    }
+
+    /**
+     * Delete interpreter and free resources.
+     */
+    public void deleteInterpreter(MemorySegment interpreter) {
+        try {
+            TfLiteInterpreterDelete.invoke(interpreter);
+        } catch (Throwable e) {
+            log.error("Failed to delete interpreter", e);
+        }
+    }
+
+    /**
+     * Allocate tensors for the interpreter.
+     */
+    public int allocateTensors(MemorySegment interpreter) {
+        try {
+            return (int) TfLiteInterpreterAllocateTensors.invoke(interpreter);
+        } catch (Throwable e) {
+            throw new RuntimeException("Failed to allocate tensors", e);
+        }
+    }
+
+    /**
+     * Invoke the interpreter (run inference).
+     */
+    public int invoke(MemorySegment interpreter) {
+        try {
+            return (int) TfLiteInterpreterInvoke.invoke(interpreter);
+        } catch (Throwable e) {
+            throw new RuntimeException("Failed to invoke interpreter", e);
+        }
+    }
+
+    // ===== Tensor Access =====
+
+    /**
+     * Get number of input tensors.
+     */
+    public int getInputTensorCount(MemorySegment interpreter) {
+        try {
+            return (int) TfLiteInterpreterGetInputTensorCount.invoke(interpreter);
+        } catch (Throwable e) {
+            throw new RuntimeException("Failed to get input tensor count", e);
+        }
+    }
+
+    /**
+     * Get number of output tensors.
+     */
+    public int getOutputTensorCount(MemorySegment interpreter) {
+        try {
+            return (int) TfLiteInterpreterGetOutputTensorCount.invoke(interpreter);
+        } catch (Throwable e) {
+            throw new RuntimeException("Failed to get output tensor count", e);
+        }
+    }
+
+    /**
+     * Get input tensor by index.
+     */
+    public MemorySegment getInputTensor(MemorySegment interpreter, int index) {
+        try {
+            return (MemorySegment) TfLiteInterpreterGetInputTensor.invoke(interpreter, index);
+        } catch (Throwable e) {
+            throw new RuntimeException("Failed to get input tensor " + index, e);
+        }
+    }
+
+    /**
+     * Get output tensor by index.
+     */
+    public MemorySegment getOutputTensor(MemorySegment interpreter, int index) {
+        try {
+            return (MemorySegment) TfLiteInterpreterGetOutputTensor.invoke(interpreter, index);
+        } catch (Throwable e) {
+            throw new RuntimeException("Failed to get output tensor " + index, e);
+        }
+    }
+
+    // ===== Tensor Inspection =====
+
+    /**
+     * Get tensor data type.
+     */
+    public int getTensorType(MemorySegment tensor) {
+        try {
+            return (int) TfLiteTensorType.invoke(tensor);
+        } catch (Throwable e) {
+            throw new RuntimeException("Failed to get tensor type", e);
+        }
+    }
+
+    /**
+     * Get number of dimensions in tensor.
+     */
+    public int getTensorNumDims(MemorySegment tensor) {
+        try {
+            return (int) TfLiteTensorNumDims.invoke(tensor);
+        } catch (Throwable e) {
+            throw new RuntimeException("Failed to get tensor num dims", e);
+        }
+    }
+
+    /**
+     * Get specific dimension size.
+     */
+    public int getTensorDim(MemorySegment tensor, int dimIndex) {
+        try {
+            return (int) TfLiteTensorDim.invoke(tensor, dimIndex);
+        } catch (Throwable e) {
+            throw new RuntimeException("Failed to get tensor dim " + dimIndex, e);
+        }
+    }
+
+    /**
+     * Get tensor byte size.
+     */
+    public long getTensorByteSize(MemorySegment tensor) {
+        try {
+            return (long) TfLiteTensorByteSize.invoke(tensor);
+        } catch (Throwable e) {
+            throw new RuntimeException("Failed to get tensor byte size", e);
+        }
+    }
+
+    /**
+     * Get pointer to tensor data.
+     */
+    public MemorySegment getTensorData(MemorySegment tensor) {
+        try {
+            return (MemorySegment) TfLiteTensorData.invoke(tensor);
+        } catch (Throwable e) {
+            throw new RuntimeException("Failed to get tensor data", e);
+        }
+    }
+
+    /**
+     * Copy data from buffer to tensor.
+     */
+    public int copyToTensor(MemorySegment tensor, MemorySegment buffer, long numBytes) {
+        try {
+            return (int) TfLiteTensorCopyFromBuffer.invoke(tensor, buffer, numBytes);
+        } catch (Throwable e) {
+            throw new RuntimeException("Failed to copy to tensor", e);
+        }
+    }
+
+    /**
+     * Copy data from tensor to buffer.
+     */
+    public int copyFromTensor(MemorySegment tensor, MemorySegment buffer, long numBytes) {
+        try {
+            return (int) TfLiteTensorCopyToBuffer.invoke(tensor, buffer, numBytes);
+        } catch (Throwable e) {
+            throw new RuntimeException("Failed to copy from tensor", e);
+        }
+    }
+
+    /**
+     * Get tensor name.
+     */
+    public String getTensorName(MemorySegment tensor) {
+        try {
+            MemorySegment namePtr = (MemorySegment) TfLiteTensorName.invoke(tensor);
+            if (namePtr == null || namePtr.address() == 0) {
+                return null;
+            }
+            return namePtr.reinterpret(Long.MAX_VALUE).getString(0);
+        } catch (Throwable e) {
+            log.warn("Failed to get tensor name", e);
+            return null;
+        }
+    }
+
+    // ===== Utility Methods =====
+
+    /**
+     * Get tensor shape as long array.
+     */
+    public long[] getTensorShape(MemorySegment tensor) {
+        int numDims = getTensorNumDims(tensor);
+        long[] shape = new long[numDims];
+        for (int i = 0; i < numDims; i++) {
+            shape[i] = getTensorDim(tensor, i);
+        }
+        return shape;
+    }
+
+    /**
+     * TfLiteType enum mapping.
+     */
+    public enum TfLiteType {
+        NO_TYPE(0),
+        FLOAT32(1),
+        INT32(2),
+        UINT8(3),
+        INT64(4),
+        STRING(5),
+        BOOL(6),
+        INT16(7),
+        COMPLEX64(8),
+        INT8(9),
+        FLOAT16(10),
+        FLOAT64(11),
+        COMPLEX128(12),
+        UINT64(13),
+        RESOURCE(14),
+        VARIANT(15),
+        UINT32(16),
+        UINT16(17),
+        INT4(18);
+
+        public final int value;
+
+        TfLiteType(int value) {
+            this.value = value;
+        }
+
+        public static TfLiteType fromInt(int value) {
+            for (TfLiteType type : values()) {
+                if (type.value == value) {
+                    return type;
+                }
+            }
+            throw new IllegalArgumentException("Unknown TfLiteType: " + value);
+        }
+    }
+}
