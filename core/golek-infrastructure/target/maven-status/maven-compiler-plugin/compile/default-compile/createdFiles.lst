@@ -1,0 +1,5 @@
+tech/kayys/golek/infra/observability/AuditLoggerPlugin.class
+tech/kayys/golek/infra/PrometheusMetrics.class
+tech/kayys/golek/infra/observability/AuditEventPublisher.class
+tech/kayys/golek/infra/VaultSecretManager.class
+tech/kayys/golek/infra/observability/ProvenanceStore.class
