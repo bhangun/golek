@@ -8,7 +8,6 @@
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-engine/src/main/java/tech/kayys/golek/engine/execution/DefaultExecutionStateMachine.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-engine/src/main/java/tech/kayys/golek/engine/execution/ExecutionSignal.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-engine/src/main/java/tech/kayys/golek/engine/execution/ExecutionStateMachine.java
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-engine/src/main/java/tech/kayys/golek/engine/execution/ExecutionStatus.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-engine/src/main/java/tech/kayys/golek/engine/execution/ModelRunnerFactory.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-engine/src/main/java/tech/kayys/golek/engine/inference/DefaultInferenceEngine.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-engine/src/main/java/tech/kayys/golek/engine/inference/DefaultInferenceObserver.java
@@ -37,7 +36,6 @@
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-engine/src/main/java/tech/kayys/golek/engine/model/ModelRepositoryProvider.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-engine/src/main/java/tech/kayys/golek/engine/model/ModelRepositoryRegistry.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-engine/src/main/java/tech/kayys/golek/engine/model/ModelRunner.java
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-engine/src/main/java/tech/kayys/golek/engine/model/ModelRunnerFactory.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-engine/src/main/java/tech/kayys/golek/engine/model/ModelRunnerProvider.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-engine/src/main/java/tech/kayys/golek/engine/model/ModelStorageService.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-engine/src/main/java/tech/kayys/golek/engine/model/ModelVersion.java

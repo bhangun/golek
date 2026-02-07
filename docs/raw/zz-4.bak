@@ -1087,7 +1087,7 @@ observability:
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         
         <!-- Quarkus -->
-        <quarkus.version>3.16.3</quarkus.version>
+        <quarkus.version>3.31.2</quarkus.version>
         
         <!-- Libraries -->
         <onnxruntime.version>1.19.2</onnxruntime.version>
