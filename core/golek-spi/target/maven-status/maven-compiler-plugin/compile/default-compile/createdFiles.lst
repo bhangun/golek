@@ -19,6 +19,7 @@ tech/kayys/golek/spi/AuditPayload$Builder.class
 tech/kayys/golek/spi/exception/ProviderException$ProviderAuthenticationException.class
 tech/kayys/golek/spi/tool/ToolCall$Function.class
 tech/kayys/golek/spi/tool/ToolCall.class
+tech/kayys/golek/plugin/api/PluginException.class
 tech/kayys/golek/spi/execution/ExecutionStatus.class
 tech/kayys/golek/spi/provider/ProviderMetadata.class
 tech/kayys/golek/spi/inference/InferenceRequest$Builder.class
@@ -33,9 +34,12 @@ tech/kayys/golek/spi/tool/ToolDefinition$Builder.class
 tech/kayys/golek/spi/tool/Function.class
 tech/kayys/golek/spi/inference/InferenceResponse.class
 tech/kayys/golek/spi/provider/ProviderRequest$Builder.class
+tech/kayys/golek/spi/model/ModelRegistry.class
 tech/kayys/golek/spi/model/HealthStatus.class
 tech/kayys/golek/spi/exception/DeviceException.class
+tech/kayys/golek/spi/storage/ModelStorageService.class
 tech/kayys/golek/spi/model/StorageRequirements.class
+tech/kayys/golek/spi/model/ModelRegistry$ModelUploadRequest.class
 tech/kayys/golek/spi/AuditPayload$Actor.class
 tech/kayys/golek/spi/provider/ProviderMetrics.class
 tech/kayys/golek/spi/provider/ProviderCapabilities$1.class
@@ -44,6 +48,7 @@ tech/kayys/golek/spi/Message$Role.class
 tech/kayys/golek/spi/plugin/GolekPlugin$PluginMetadata.class
 tech/kayys/golek/spi/context/RequestContext.class
 tech/kayys/golek/spi/model/HealthStatus$Status.class
+tech/kayys/golek/spi/model/Pageable.class
 tech/kayys/golek/spi/provider/ProviderCapabilities.class
 tech/kayys/golek/spi/plugin/PluginState.class
 tech/kayys/golek/spi/inference/InferenceResponseInterface.class
@@ -52,6 +57,7 @@ tech/kayys/golek/spi/plugin/PluginContext.class
 tech/kayys/golek/spi/tool/ToolCall$Builder.class
 tech/kayys/golek/spi/provider/RoutingDecision$Builder.class
 tech/kayys/golek/spi/provider/LLMProvider.class
+tech/kayys/golek/spi/model/ModelRegistry$ModelStats.class
 tech/kayys/golek/spi/routing/ModelProviderMapping.class
 tech/kayys/golek/spi/ErrorPayload.class
 tech/kayys/golek/spi/model/RunnerMetadata.class
@@ -77,6 +83,7 @@ tech/kayys/golek/spi/exception/ProviderException.class
 tech/kayys/golek/spi/provider/RoutingDecision.class
 tech/kayys/golek/spi/provider/RoutingContext$Builder.class
 tech/kayys/golek/spi/provider/ProviderRequest.class
+tech/kayys/golek/spi/model/ModelManifest$ModelManifestBuilder.class
 tech/kayys/golek/spi/context/EngineContext.class
 tech/kayys/golek/spi/error/ErrorCode.class
 tech/kayys/golek/spi/provider/StreamingProvider.class

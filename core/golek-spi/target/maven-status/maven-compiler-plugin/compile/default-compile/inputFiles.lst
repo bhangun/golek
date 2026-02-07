@@ -8,6 +8,7 @@
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-spi/src/main/java/tech/kayys/golek/spi/exception/DeviceException.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-spi/src/main/java/tech/kayys/golek/spi/exception/InferenceException.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-spi/src/main/java/tech/kayys/golek/spi/exception/ModelException.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-spi/src/main/java/tech/kayys/golek/spi/exception/PluginException.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-spi/src/main/java/tech/kayys/golek/spi/exception/ProviderException.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-spi/src/main/java/tech/kayys/golek/spi/exception/QuotaExceededException.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-spi/src/main/java/tech/kayys/golek/spi/execution/ExecutionStatus.java
@@ -22,6 +23,8 @@
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-spi/src/main/java/tech/kayys/golek/spi/model/MemoryRequirements.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-spi/src/main/java/tech/kayys/golek/spi/model/ModelFormat.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-spi/src/main/java/tech/kayys/golek/spi/model/ModelManifest.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-spi/src/main/java/tech/kayys/golek/spi/model/ModelRegistry.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-spi/src/main/java/tech/kayys/golek/spi/model/Pageable.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-spi/src/main/java/tech/kayys/golek/spi/model/ResourceMetrics.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-spi/src/main/java/tech/kayys/golek/spi/model/ResourceRequirements.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-spi/src/main/java/tech/kayys/golek/spi/model/RunnerMetadata.java
@@ -58,6 +61,7 @@
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-spi/src/main/java/tech/kayys/golek/spi/routing/RoutingConfig.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-spi/src/main/java/tech/kayys/golek/spi/routing/RoutingDecision.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-spi/src/main/java/tech/kayys/golek/spi/routing/SelectionStrategy.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-spi/src/main/java/tech/kayys/golek/spi/storage/ModelStorageService.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-spi/src/main/java/tech/kayys/golek/spi/stream/StreamChunk.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-spi/src/main/java/tech/kayys/golek/spi/tool/Function.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-spi/src/main/java/tech/kayys/golek/spi/tool/ToolCall.java
