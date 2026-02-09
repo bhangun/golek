@@ -1,0 +1,16 @@
+tech/kayys/golek/provider/ollama/OllamaClient.class
+tech/kayys/golek/provider/ollama/OllamaShowRequest.class
+tech/kayys/golek/provider/ollama/OllamaResponse.class
+tech/kayys/golek/provider/ollama/OllamaStreamChunk.class
+tech/kayys/golek/provider/ollama/OllamaEmbeddingRequest.class
+tech/kayys/golek/provider/ollama/OllamaModelInfo.class
+tech/kayys/golek/provider/ollama/OllamaConfig.class
+tech/kayys/golek/provider/ollama/OllamaPullProgress.class
+tech/kayys/golek/provider/ollama/OllamaProvider.class
+tech/kayys/golek/provider/ollama/OllamaModelsResponse.class
+tech/kayys/golek/provider/ollama/OllamaRequest.class
+tech/kayys/golek/provider/ollama/OllamaPullRequest.class
+tech/kayys/golek/provider/ollama/OllamaMessage.class
+tech/kayys/golek/provider/ollama/OllamaModelDetails.class
+tech/kayys/golek/provider/ollama/OllamaOptions.class
+tech/kayys/golek/provider/ollama/OllamaEmbeddingResponse.class

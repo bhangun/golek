@@ -1,0 +1,16 @@
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/provider/golek-provider-ollama/src/main/java/tech/kayys/golek/provider/ollama/OllamaClient.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/provider/golek-provider-ollama/src/main/java/tech/kayys/golek/provider/ollama/OllamaConfig.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/provider/golek-provider-ollama/src/main/java/tech/kayys/golek/provider/ollama/OllamaEmbeddingRequest.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/provider/golek-provider-ollama/src/main/java/tech/kayys/golek/provider/ollama/OllamaEmbeddingResponse.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/provider/golek-provider-ollama/src/main/java/tech/kayys/golek/provider/ollama/OllamaMessage.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/provider/golek-provider-ollama/src/main/java/tech/kayys/golek/provider/ollama/OllamaModelDetails.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/provider/golek-provider-ollama/src/main/java/tech/kayys/golek/provider/ollama/OllamaModelInfo.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/provider/golek-provider-ollama/src/main/java/tech/kayys/golek/provider/ollama/OllamaModelsResponse.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/provider/golek-provider-ollama/src/main/java/tech/kayys/golek/provider/ollama/OllamaOptions.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/provider/golek-provider-ollama/src/main/java/tech/kayys/golek/provider/ollama/OllamaProvider.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/provider/golek-provider-ollama/src/main/java/tech/kayys/golek/provider/ollama/OllamaPullProgress.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/provider/golek-provider-ollama/src/main/java/tech/kayys/golek/provider/ollama/OllamaPullRequest.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/provider/golek-provider-ollama/src/main/java/tech/kayys/golek/provider/ollama/OllamaRequest.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/provider/golek-provider-ollama/src/main/java/tech/kayys/golek/provider/ollama/OllamaResponse.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/provider/golek-provider-ollama/src/main/java/tech/kayys/golek/provider/ollama/OllamaShowRequest.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/provider/golek-provider-ollama/src/main/java/tech/kayys/golek/provider/ollama/OllamaStreamChunk.java
