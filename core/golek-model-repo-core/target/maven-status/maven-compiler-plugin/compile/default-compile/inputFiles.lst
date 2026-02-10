@@ -2,7 +2,11 @@
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-model-repo-core/src/main/java/tech/kayys/golek/model/core/HardwareCapabilities.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-model-repo-core/src/main/java/tech/kayys/golek/model/core/HardwareDetector.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-model-repo-core/src/main/java/tech/kayys/golek/model/core/LocalModelRepository.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-model-repo-core/src/main/java/tech/kayys/golek/model/core/ModelArtifact.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-model-repo-core/src/main/java/tech/kayys/golek/model/core/ModelDescriptor.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-model-repo-core/src/main/java/tech/kayys/golek/model/core/ModelRef.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-model-repo-core/src/main/java/tech/kayys/golek/model/core/ModelRepository.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-model-repo-core/src/main/java/tech/kayys/golek/model/core/ModelRepositoryProvider.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-model-repo-core/src/main/java/tech/kayys/golek/model/core/ModelSyncService.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-model-repo-core/src/main/java/tech/kayys/golek/model/core/Pageable.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-model-repo-core/src/main/java/tech/kayys/golek/model/core/RemoteModelRepository.java

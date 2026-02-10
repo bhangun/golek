@@ -4,8 +4,7 @@ tech/kayys/golek/core/plugin/PluginMetadata.class
 tech/kayys/golek/core/reliability/FallbackStrategyRegistry.class
 tech/kayys/golek/core/exception/AuthorizationException.class
 tech/kayys/golek/core/execution/ExecutionToken.class
-tech/kayys/golek/core/observability/LogAggregator.class
-tech/kayys/golek/core/observability/LogAggregator$LogEntry.class
+tech/kayys/golek/core/inference/BatchInferenceRequest.class
 tech/kayys/golek/core/config/ConfigurationManager.class
 tech/kayys/golek/core/plugin/PluginClassLoader.class
 tech/kayys/golek/core/plugin/AbstractPlugin.class
@@ -28,15 +27,12 @@ tech/kayys/golek/core/audit/AuditLoggingPlugin.class
 tech/kayys/golek/core/plugin/PluginMetadata$Builder.class
 tech/kayys/golek/core/pipeline/InferencePipeline.class
 tech/kayys/golek/core/exception/AllRunnersFailedException.class
-tech/kayys/golek/core/observability/ObservabilityManager$RunnableWithException.class
 tech/kayys/golek/core/plugin/ExtensionPoint.class
 tech/kayys/golek/core/service/ServiceRegistry.class
 tech/kayys/golek/core/config/EnhancedConfigurationManager.class
-tech/kayys/golek/core/observability/MetricsRegistry.class
 tech/kayys/golek/core/inference/InferenceEngine.class
 tech/kayys/golek/core/plugin/InferencePhasePlugin.class
-tech/kayys/golek/core/observability/ObservabilityManager$SupplierWithException.class
-tech/kayys/golek/core/observability/ObservabilityManager.class
+tech/kayys/golek/core/inference/InferenceEngine$EngineStats.class
 tech/kayys/golek/core/plugin/InferencePhasePlugin$PhasePluginException.class
 tech/kayys/golek/core/config/ConfigurationManager$ConfigChangeListener.class
 tech/kayys/golek/core/execution/ExecutionToken$Builder.class

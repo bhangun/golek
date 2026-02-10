@@ -1,16 +1,11 @@
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-provider-core/src/main/java/tech/kayys/golek/provider/core/audit/AuditLoggingPlugin.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-provider-core/src/main/java/tech/kayys/golek/provider/core/exception/NoCompatibleProviderException.java
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-provider-core/src/main/java/tech/kayys/golek/provider/core/exception/ProviderException.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-provider-core/src/main/java/tech/kayys/golek/provider/core/exception/RetryableException.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-provider-core/src/main/java/tech/kayys/golek/provider/core/loader/ArtifactResolver.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-provider-core/src/main/java/tech/kayys/golek/provider/core/quota/DefaultProviderQuotaService.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-provider-core/src/main/java/tech/kayys/golek/provider/core/quota/ProviderQuotaService.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-provider-core/src/main/java/tech/kayys/golek/provider/core/ratelimit/RateLimiter.java
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-provider-core/src/main/java/tech/kayys/golek/provider/core/spi/LLMProvider.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-provider-core/src/main/java/tech/kayys/golek/provider/core/spi/PluginProviderWrapper.java
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-provider-core/src/main/java/tech/kayys/golek/provider/core/spi/ProviderCandidate.java
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-provider-core/src/main/java/tech/kayys/golek/provider/core/spi/ProviderContext.java
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-provider-core/src/main/java/tech/kayys/golek/provider/core/spi/RoutingDecision.java
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-provider-core/src/main/java/tech/kayys/golek/provider/core/spi/StreamingProvider.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-provider-core/src/main/java/tech/kayys/golek/provider/core/streaming/ChunkProcessor.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-provider-core/src/main/java/tech/kayys/golek/provider/core/streaming/SSEStreamHandler.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-provider-core/src/main/java/tech/kayys/golek/provider/core/streaming/StreamHandler.java

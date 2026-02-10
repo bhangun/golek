@@ -8,6 +8,7 @@
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/sdk/golek-sdk-core/src/main/java/tech/kayys/golek/sdk/core/model/ModelInfo.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/sdk/golek-sdk-core/src/main/java/tech/kayys/golek/sdk/core/model/BatchInferenceRequest.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/sdk/golek-sdk-core/src/main/java/tech/kayys/golek/sdk/core/exception/NonRetryableException.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/sdk/golek-sdk-core/src/main/java/tech/kayys/golek/sdk/core/model/SystemInfo.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/sdk/golek-sdk-core/src/main/java/tech/kayys/golek/sdk/core/exception/QuotaExceededException.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/sdk/golek-sdk-core/src/main/java/tech/kayys/golek/sdk/core/config/SdkConfig.java
 /Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/sdk/golek-sdk-core/src/main/java/tech/kayys/golek/sdk/core/exception/TimeoutException.java

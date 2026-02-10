@@ -1,0 +1,12 @@
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-api-rest/src/main/java/tech/kayys/golek/api/dto/AsyncJobResponse.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-api-rest/src/main/java/tech/kayys/golek/api/dto/ErrorResponseDTO.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-api-rest/src/main/java/tech/kayys/golek/api/dto/InferenceMessageDTO.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-api-rest/src/main/java/tech/kayys/golek/api/dto/InferenceRequestDTO.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-api-rest/src/main/java/tech/kayys/golek/api/dto/InferenceResponseDTO.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-api-rest/src/main/java/tech/kayys/golek/api/dto/RoutingDecisionDTO.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-api-rest/src/main/java/tech/kayys/golek/api/dto/StreamChunkDTO.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-api-rest/src/main/java/tech/kayys/golek/api/rest/HealthResource.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-api-rest/src/main/java/tech/kayys/golek/api/rest/InferenceResource.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-api-rest/src/main/java/tech/kayys/golek/api/rest/ModelManagementResource.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-api-rest/src/main/java/tech/kayys/golek/api/rest/ProviderInfoDTO.java
+/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/core/golek-api-rest/src/main/java/tech/kayys/golek/api/rest/ProviderManagementResource.java
