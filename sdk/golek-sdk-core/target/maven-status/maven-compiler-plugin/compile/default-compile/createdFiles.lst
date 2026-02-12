@@ -15,6 +15,7 @@ tech/kayys/golek/sdk/core/tenant/TenantResolver.class
 tech/kayys/golek/sdk/factory/GolekSdkFactory.class
 tech/kayys/golek/sdk/core/model/SystemInfo.class
 tech/kayys/golek/sdk/core/model/AsyncJobStatus.class
+tech/kayys/golek/sdk/core/tenant/TenantResolver$1.class
 tech/kayys/golek/sdk/core/model/BatchInferenceRequest.class
 tech/kayys/golek/sdk/core/exception/SdkException.class
 tech/kayys/golek/sdk/core/config/SdkConfig$ProviderConfig.class
