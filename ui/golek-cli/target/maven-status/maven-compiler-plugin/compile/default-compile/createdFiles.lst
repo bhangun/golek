@@ -1,8 +1,8 @@
 tech/kayys/golek/cli/commands/ShowCommand.class
 tech/kayys/golek/cli/GolekCommand.class
 tech/kayys/golek/cli/commands/RunCommand.class
-tech/kayys/golek/cli/commands/ProvidersCommand.class
 tech/kayys/golek/cli/commands/PullCommand.class
 tech/kayys/golek/cli/commands/InfoCommand.class
 tech/kayys/golek/cli/commands/ChatCommand.class
+tech/kayys/golek/cli/commands/ProvidersCommand.class
 tech/kayys/golek/cli/commands/ListCommand.class
