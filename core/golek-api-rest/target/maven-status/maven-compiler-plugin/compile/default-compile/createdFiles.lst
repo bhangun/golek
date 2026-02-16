@@ -5,9 +5,4 @@ tech/kayys/golek/api/dto/InferenceResponseDTO.class
 tech/kayys/golek/api/dto/StreamChunkDTO.class
 tech/kayys/golek/api/dto/InferenceRequestDTO.class
 tech/kayys/golek/api/dto/RoutingDecisionDTO.class
-tech/kayys/golek/api/rest/InferenceResource.class
-tech/kayys/golek/converter/api/GGUFConverterResource.class
 tech/kayys/golek/api/dto/ErrorResponseDTO.class
-tech/kayys/golek/api/rest/ModelManagementResource.class
-tech/kayys/golek/api/rest/ProviderInfoDTO.class
-tech/kayys/golek/api/rest/ProviderManagementResource.class
