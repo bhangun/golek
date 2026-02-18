@@ -1,8 +1,0 @@
-tech/kayys/golek/api/dto/AsyncJobResponse.class
-tech/kayys/golek/api/dto/InferenceMessageDTO.class
-tech/kayys/golek/api/rest/HealthResource.class
-tech/kayys/golek/api/dto/InferenceResponseDTO.class
-tech/kayys/golek/api/dto/StreamChunkDTO.class
-tech/kayys/golek/api/dto/InferenceRequestDTO.class
-tech/kayys/golek/api/dto/RoutingDecisionDTO.class
-tech/kayys/golek/api/dto/ErrorResponseDTO.class

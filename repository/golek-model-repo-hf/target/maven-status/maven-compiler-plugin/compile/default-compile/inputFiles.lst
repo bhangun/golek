@@ -1,8 +1,0 @@
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/repository/golek-model-repo-hf/src/main/java/tech/kayys/golek/model/repo/hf/HuggingFaceArtifact.java
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/repository/golek-model-repo-hf/src/main/java/tech/kayys/golek/model/repo/hf/HuggingFaceArtifactResolver.java
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/repository/golek-model-repo-hf/src/main/java/tech/kayys/golek/model/repo/hf/HuggingFaceClient.java
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/repository/golek-model-repo-hf/src/main/java/tech/kayys/golek/model/repo/hf/HuggingFaceConfig.java
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/repository/golek-model-repo-hf/src/main/java/tech/kayys/golek/model/repo/hf/HuggingFaceDownloader.java
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/repository/golek-model-repo-hf/src/main/java/tech/kayys/golek/model/repo/hf/HuggingFaceModelInfo.java
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/repository/golek-model-repo-hf/src/main/java/tech/kayys/golek/model/repo/hf/HuggingFaceRepository.java
-/Users/bhangun/Workspace/workkayys/Products/Wayang/wayang-platform/inference-golek/repository/golek-model-repo-hf/src/main/java/tech/kayys/golek/model/repo/hf/HuggingFaceRepositoryProvider.java
